@@ -26,7 +26,9 @@ SECRET_KEY = '(6%gzj%7aq1ny#iy)q5_%s1$wni0fsy07ke71kgipl!kx*5np0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['localhost']
+
 
 
 # Application definition
@@ -62,7 +64,7 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR,'learning_log/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -153,8 +155,9 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     # # 支持所有的主机头（host header）
     #     # ALLOWED_HOSTS = ['*']
-    # 只允许heroku托管这个项目
+    只允许heroku托管这个项目
     ALLOWED_HOSTS = ['learing-log.herokuapp.com']
+
 
     DEBUG = False
 
