@@ -27,7 +27,7 @@ SECRET_KEY = '(6%gzj%7aq1ny#iy)q5_%s1$wni0fsy07ke71kgipl!kx*5np0'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = []
 
 
 
@@ -155,7 +155,7 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     # # 支持所有的主机头（host header）
     #     # ALLOWED_HOSTS = ['*']
-    只允许heroku托管这个项目
+
     ALLOWED_HOSTS = ['learing-log.herokuapp.com']
 
 
